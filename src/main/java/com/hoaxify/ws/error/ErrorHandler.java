@@ -36,6 +36,7 @@ public class ErrorHandler implements ErrorController {
         String path = (String) attributes.get("path");
         int status = (Integer) attributes.get("status");
         
+        System.out.println("deneme");
         ApiError error = new ApiError(status, message, path);
         
         if (attributes.containsKey("errors")) {
