@@ -35,6 +35,7 @@ public class ErrorHandler implements ErrorController {
         String message = (String) attributes.get("message");
         String path = (String) attributes.get("path");
         int status = (Integer) attributes.get("status");
+        
         ApiError error = new ApiError(status, message, path);
         
         if (attributes.containsKey("errors")) {
